@@ -7,3 +7,4 @@ var DocumentGallery;
     }());
     DocumentGallery.DocumentFolderEntity = DocumentFolderEntity;
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=documentFolderEntity.js.map

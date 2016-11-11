@@ -26,3 +26,4 @@ var DocumentGallery;
     DocumentGallery.FileFolderService = FileFolderService;
     angular.module('app').service('fileFolderService', DocumentGallery.FileFolderService);
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=fileFolderService.js.map

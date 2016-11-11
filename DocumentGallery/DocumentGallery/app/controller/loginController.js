@@ -36,3 +36,4 @@ var DocumentGallery;
         angular.module('app').controller('LoginController', LoginController);
     })(Controller = DocumentGallery.Controller || (DocumentGallery.Controller = {}));
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=loginController.js.map

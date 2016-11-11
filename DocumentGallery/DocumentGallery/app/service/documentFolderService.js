@@ -80,3 +80,4 @@ var DocumentGallery;
     DocumentGallery.DocumentFolderService = DocumentFolderService;
     angular.module('app').service('DocumentFolderService', DocumentGallery.DocumentFolderService);
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=documentFolderService.js.map

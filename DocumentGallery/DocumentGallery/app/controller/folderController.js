@@ -36,3 +36,4 @@ var DocumentGallery;
     DocumentGallery.FolderController = FolderController;
     angular.module('app').controller('FolderController', FolderController);
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=folderController.js.map

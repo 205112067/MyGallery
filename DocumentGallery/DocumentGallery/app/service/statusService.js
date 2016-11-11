@@ -26,3 +26,4 @@ var DocumentGallery;
     DocumentGallery.StatusService = StatusService;
     angular.module('app').service('StatusService', DocumentGallery.StatusService);
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=statusService.js.map

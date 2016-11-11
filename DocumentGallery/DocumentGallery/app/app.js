@@ -68,3 +68,4 @@ var DocumentGallery;
     });
     angular.module('app').constant('BaseUrl', 'http://localhost:50255/api/');
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=app.js.map

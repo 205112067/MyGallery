@@ -45,3 +45,4 @@ var DocumentGallery;
     DocumentGallery.FileService = FileService;
     angular.module('app').service("FileService", FileService);
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=fileService.js.map

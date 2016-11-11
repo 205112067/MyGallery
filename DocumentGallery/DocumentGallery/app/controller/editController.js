@@ -51,3 +51,4 @@ var DocumentGallery;
     DocumentGallery.EditController = EditController;
     angular.module('app').controller('editController', EditController);
 })(DocumentGallery || (DocumentGallery = {}));
+//# sourceMappingURL=editController.js.map
