@@ -1,0 +1,30 @@
+﻿<div layout="row" layout-align="center center">
+    <md-card>
+        <form name="loginForm" ng-submit="loginCtrl.loginUser()">
+            <md-card-title>Login</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+                <div layout="column" style="width:90%;">
+                    <md-input-container class="md-block">
+                        <label>Enter Username</label>
+                        <input type="text" ng-model="login.username" />
+                    </md-input-container>
+                </div>
+                <div layout="column" style="width:90%;">
+                    <md-input-container class="md-block">
+                        <label>Enter Password</label>
+                        <input type="password" ng-model="login.password" />
+                    </md-input-container>
+                </div>
+            </md-card-content>
+            <md-divider>
+            </md-divider>
+            <md-card-action>
+                <div layout-align="start end">
+                    <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+                </div>
+            </md-card-action>
+        </form>
+
+    </md-card>
+</div>

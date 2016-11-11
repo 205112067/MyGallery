@@ -1,0 +1,29 @@
+﻿<md-dialog class="primary">
+    <md-dialog-content>
+        <md-card layout="row" style="margin-top:2px;">
+            <md-card-content style="width:100%">
+                <md-card-header>
+                    Add New Folder
+                </md-card-header>
+                <form name="myForm">
+                    <div layout="column" style="width:90%">
+                        <md-input-container class="md-block">
+                            <label>Enter Folder Name</label>
+                            <input ng-model="editCtrl.dataSet.Name" autofocus>
+                        </md-input-container>
+                        <md-input-container>
+                            <label>State</label>
+                            <md-select ng-model="editCtrl.dataSet.Status_Id">
+                                <md-option ng-value="opt.Id" ng-repeat="opt in editCtrl.statusList">{{ opt.Name }}</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-button type="submit" ng-disabled="myForm.$invalid" class="infoButton md-raised" ng-click="editCtrl.update()">Update</md-button>
+                        <md-button class="defaultButton md-raised" ng-click="editCtrl.folderController.CloseDialog()">Cancel</md-button>
+                    </div>
+                </form>
+            </md-card-content>
+        </md-card>
+    </md-dialog-content>
+</md-dialog>

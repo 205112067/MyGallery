@@ -1,0 +1,4 @@
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryEntity\bin\Debug\DocumentGalleryEntity.dll
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryEntity\bin\Debug\DocumentGalleryEntity.pdb
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryEntity\obj\Debug\DocumentGalleryEntity.dll
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryEntity\obj\Debug\DocumentGalleryEntity.pdb

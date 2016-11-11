@@ -1,0 +1,24 @@
+﻿<md-dialog class="primary">
+    <md-dialog-content>
+        <md-card layout="row" style="margin-top:2px;">
+            <md-card-content style="width:100%">
+                <md-card-header>
+                    Add New File
+                </md-card-header>
+                <form name="myForm">
+                    <div layout="column" style="width:90%">
+                        <md-input-container class="md-block">
+                            <label>Enter File Name</label>
+                            <input ng-model="fileController.objFile.Name">
+                        </md-input-container>
+                    </div>
+                    <lf-ng-md-file-input lf-files='files' multiple> </lf-ng-md-file-input>
+                    <div layout="row" layout-align="center center">
+                        <md-button type="submit" ng-disabled="myForm.$invalid" class="infoButton md-raised" ng-click="fileController.updateFile()">Submit</md-button>
+                        <md-button class="defaultButton md-raised" ng-click="fileController.CloseDialog()">Cancel</md-button>
+                    </div>
+                </form>
+            </md-card-content>
+        </md-card>
+    </md-dialog-content>
+</md-dialog>

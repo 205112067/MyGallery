@@ -1,0 +1,23 @@
+﻿<md-dialog class="primary">
+    <md-dialog-content>
+        <md-card layout="row" style="margin-top:2px;">
+            <md-card-content style="width:100%">
+                <md-card-header>
+                    Add New Folder
+                </md-card-header>
+                <form name="myForm">
+                    <div layout="column" style="width:90%">
+                        <md-input-container class="md-block">
+                            <label>Enter Folder Name</label>
+                            <input ng-model="folderController.objFolder.Name" autofocus>
+                        </md-input-container>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-button type="submit" ng-disabled="myForm.$invalid" class="infoButton md-raised" ng-click="folderController.updateDocumentFolder()">Submit</md-button>
+                        <md-button class="defaultButton md-raised" ng-click="folderController.CloseDialog()">Cancel</md-button>
+                    </div>
+                </form>
+            </md-card-content>
+        </md-card>
+    </md-dialog-content>
+</md-dialog>

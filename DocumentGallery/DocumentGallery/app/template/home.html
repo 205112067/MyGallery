@@ -1,0 +1,99 @@
+﻿<md-content layout="column">
+    <md-card>
+        <div layout="row" style="background-color:#d6cfc6;padding:5px;margin-bottom:15px;">
+
+            <small style="cursor:pointer" ui-sref="home({parent_Id: 0})">Home /</small>
+            <small style="cursor:pointer" ng-repeat="url in documentFolderController.AddressBarList" ui-sref="home({parent_Id: url.Id})"> {{url.Name}} /</small>
+
+            <span flex></span>
+            <i class="fa fa-circle Active" style="margin-right:20px;"> Active</i>
+            <i class="fa fa-circle Inactive" style="margin-right:20px;"> Inactive</i>
+        </div>
+        <md-toolbar class="md-table-toolbar md-default" md-scroll-shrink="">
+            <div class="md-toolbar-tools">
+                <md-input-container>
+                    <md-button class="md-button md-raised" ng-click="documentFolderController.addNewFolder($event)">
+                        <i class="fa fa-plus"></i>
+                        Add New Folder
+                    </md-button>
+                </md-input-container>
+                <md-input-container>
+                    <md-button class="md-button md-raised" ng-click="documentFolderController.addNewFile($event)">
+                        <i class="fa fa-plus"></i>
+                        Add New File
+                    </md-button>
+                </md-input-container>
+
+                <div flex></div>
+                <md-input-container>
+                    <label for="searchglobal">Search</label>
+                    <md-icon class="material-icons" style="color:blue;">search</md-icon>
+                    <input ng-change="documentFolderController.searchFolderFile()" type="search" id="searchglobal" layout-align="end start" ng-model="documentFolderController.search" input-clear>
+                </md-input-container>
+            </div>
+        </md-toolbar>
+
+        <md-table-container>
+            <table md-table id="document-list">
+                <thead ng-if="!options.decapitate" md-head md-order="query.order" md-on-reorder="logOrder">
+                    <tr md-row>
+                        <th md-column md-order-by="Name"><span>Name</span></th>
+                        <th md-column md-order-by="UpdatedOn"><span>Date Modified</span></th>
+                        <th md-column md-order-by="Type"><span>Type</span></th>
+                        <!--<th md-column md-order-by="Status_Name"><span>Status</span></th>-->
+                        <th md-column md-order-by="Size" md-number><span>Size</span></th>
+                        <th md-column md-number><span>Action</span></th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr ng-repeat="folder in documentFolderController.DocumentFolderList  | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+                        <td ng-if="folder.Type=='FileFolder'" md-cell ui-sref="home({parent_Id: folder.Id})" style="cursor:pointer;">
+                            <i class="fa fa-circle {{folder.Status_Name}}"></i>
+                            <img src="../../Content/icon/{{folder.Type}}.ico" class="myIcon" />
+                            {{folder.Name}}
+                        </td>
+                        <td ng-if="folder.Type!='FileFolder'"
+                            ng-click="documentFolderController.downloadFile(folder.Id)"
+                            md-cell
+                            style="cursor:pointer;">
+                            <i class="fa fa-circle {{folder.Status_Name}}"></i>
+                            <img src="../../Content/icon/{{folder.Type}}.ico" class="myIcon" />
+                            {{folder.Name}}
+                        </td>
+
+                        <td md-cell>{{folder.UpdatedOn | date:'medium'}}</td>
+                        <td md-cell>{{folder.Type}}</td>
+                        <!--<td md-cell>{{folder.Status_Name}}</td>-->
+                        <td md-cell>{{folder.Size}}</td>
+                        <td md-cell>
+                            <i class="fa fa-trash fa-2x" style="color:red;"
+                               ng-click="documentFolderController.delete(folder,'Delete')">
+                                <md-tooltip md-direction="left">
+                                    delete
+                                </md-tooltip>
+                            </i>
+                            <i class="fa fa-edit fa-2x" style="color:dodgerblue;"
+                               ng-click="documentFolderController.update($event,folder.Id,folder.Type,$index)">
+                                <md-tooltip md-direction="top">
+                                    edit
+                                </md-tooltip>
+                            </i>
+                            <i ng-if="folder.Type!='FileFolder'"
+                               ng-click="documentFolderController.downloadFile(folder.Id)"
+                               class="fa fa-download fa-2x"
+                               style="color:forestgreen;">
+                                <md-tooltip md-direction="right">
+                                    download
+                                </md-tooltip>
+                            </i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <md-table-pagination class="hide-xs" md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{(documentFolderController.DocumentFolderList | filter: filter.search).length}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination"></md-table-pagination>
+        </md-table-container>
+    </md-card>
+</md-content>
+

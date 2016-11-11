@@ -1,0 +1,8 @@
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\bin\Debug\DocumentGalleryBL.dll
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\bin\Debug\DocumentGalleryBL.pdb
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\bin\Debug\DocumentGalleryEntity.dll
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\bin\Debug\Siemens.iPort.EntityLite.dll
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\bin\Debug\DocumentGalleryEntity.pdb
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\obj\Debug\DocumentGalleryBL.csprojResolveAssemblyReference.cache
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\obj\Debug\DocumentGalleryBL.dll
+F:\WebDevelopement\DocumentGallery\DocumentGallery\DocumentGalleryBL\obj\Debug\DocumentGalleryBL.pdb
