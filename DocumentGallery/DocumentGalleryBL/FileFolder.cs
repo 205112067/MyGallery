@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using DocumentGalleryEntity;
+using System.IO;
 
 namespace DocumentGalleryBL
 {
@@ -20,7 +21,15 @@ namespace DocumentGalleryBL
             parameters.Add(new SqlParameter("@Type", type));
             parameters.Add(new SqlParameter("@Action", action));
             parameters.Add(new SqlParameter("@Status_Id", status_Id));
+            if (action == "Delete" && type!= "FileFolder")
+                disposeFile();
             return Convert.ToInt32( this.ExecuteProcedure(spName, parameters));
+        }
+        public void disposeFile()
+        {
+            string fileName = "10_download.jpg";
+            string filePath = HttpContext.Current.Server.MapPath("/FileFolder/")+fileName;
+            File.Delete(filePath);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace DocumetGalleryWebAPI.Controllers
         public string UpdateFile()
         {
             string result = string.Empty;
-            DocumentGalleryBL.File objFile = new DocumentGalleryBL.File();
+            Files objFile = new Files();
             result = objFile.updateFile();
             return result;
         }
@@ -32,7 +32,7 @@ namespace DocumetGalleryWebAPI.Controllers
         [HttpGet]
         public HttpResponseMessage DownloadFile(long file_Id)
         {
-            DocumentGalleryBL.File objFile = new DocumentGalleryBL.File();
+            Files objFile = new Files();
             var fileUrl = objFile.getFileUrl(file_Id);
             var path = System.Web.HttpContext.Current.Server.MapPath("~/FileFolder/" +file_Id+'_' +fileUrl);
             HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);

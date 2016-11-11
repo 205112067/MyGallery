@@ -8,7 +8,7 @@ using System.IO;
 
 namespace DocumentGalleryBL
 {
-    public class File : EntityManager
+    public class Files : EntityManager
     {
         public string updateFile()
         {
